@@ -7,14 +7,14 @@
     <title>Encriptador Challeng G7</title>
     <link rel="shortcut icon" href="/text-encriptor-main/img/favicon.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
-    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
   </head>
   <body>
     <header>
       <img class="imagen__logo" src="/text-encriptor-main/img/Logo-Photoroom.png" alt="logo"/>
     </header>
-    <div class="container">
-      <div class="encriptar">
+
+    <div class="container"> <!--div1-->
+      <div class="encriptar"> <!--div2-->
         <textarea
           name="texto"
           class="texto"
@@ -23,33 +23,42 @@
           rows="10"
           placeholder="Ingresa el texto aquí"
         ></textarea>
+        
+          <div class="terminos"> <!--div3-->
+            <img src="/text-encriptor-main/img/alerta.svg" alt="signo de alerta"/>
+            <p>Solo letras minúsculas y sin acentos.</p>
+          </div> <!--div3-->
 
-        <div class="terminos">
-          <img src="/text-encriptor-main/img/alerta.svg" alt="signo de alerta"/>
-          <p>Solo letras minúsculas y sin acentos.</p>
-        </div>
-        <div class="botones">
-          <button class="btn-encriptar" type="button" onclick="encriptar()">
-            Encriptar
-          </button>
-          <input
-            type="button"
-            class="btn-desencriptar"
-            value="Desencriptar"
-            onclick="desencriptar()"
-          />
-        </div>
-      </div>
-      <div class="encriptado">
-        <img src="/text-encriptor-main/img/muñeco-Photoroom.png" alt="imagen encriptado"/>
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-          <p id="parrafo">
-            Ingresa el texto que deseas encriptar o desencriptar
-          </p>
-        </div>
-      </div>
-    </div>
+          <div class="botones"> <!--div4-->
+            <button class="btn-encriptar" type="button" onclick="encriptar()">
+              Encriptar
+            </button>
+              <input
+                type="button"
+                class="btn-desencriptar"
+                value="Desencriptar"
+                onclick="desencriptar()"
+              />
+          </div> <!--div4-->    
+      </div> <!--div2-->
+    </div> <!--div1-->
+
+    <div class="encriptado"> <!--div5-->
+      <img src="/text-encriptor-main/img/muñeco-Photoroom.png" alt="" id="investigadora"/>
+        <div class="mensaje-encriptado" id="mensaje-encriptado"> <!--div6-->
+          <h2 id="titulo-mensaje">Mensaje no encontrado</h2>
+          <p id="parrafo"></p>
+          <div > <!--div7-->
+            <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+          </div> <!--div7-->
+        </div> <!--div6-->  
+        
+    </div> <!--div5-->
+    
+
+    <footer class="footer">
+      <p>Desarrollado por Gina Susatama</p>
+
   </body>
   <script src="index.js"></script>
 </html>
